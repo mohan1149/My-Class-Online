@@ -9,8 +9,7 @@ import {
     ActivityIndicator,
     Alert,
 } from 'react-native';
-import SkeletonPlaceholder from "react-native-skeleton-placeholder";
-import { Button, ListItem } from 'react-native-elements';
+import Orientation from "react-native-orientation";
 import axios from 'axios';
 import AsyncStorage from '@react-native-community/async-storage';
 import { LineChart, PieChart } from 'react-native-chart-kit';
@@ -55,13 +54,6 @@ export default class reportsComponent extends Component {
                     {/* <Appbar.Action icon="dots-vertical" onPress={() => this._menu.show()} /> */}
                 </Appbar.Header>
                 <ScrollView>
-                    <Text
-                        style={{
-                            margin: 5,
-                            fontWeight: "400",
-                            letterSpacing: 1.5
-                        }}
-                    >Rotate your device to Landscape for full view.</Text>
                     {this.state.pie_data === null &&
                         <ActivityIndicator
                             size="large"
@@ -83,7 +75,7 @@ export default class reportsComponent extends Component {
                                 }}
                             >
                                 ATTENDENCE TAKEN VS MONTH
-                        </Text>
+                            </Text>
                             <LineChart
                                 data={{
                                     labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", 'AUG', "SEP", "OCT", "NOV", "DEC"],
@@ -91,14 +83,16 @@ export default class reportsComponent extends Component {
                                         data: this.state.barData,
                                     }]
                                 }}
-                                width={600}
-                                height={270}
+                                width={Dimensions.get('screen').width-30}
+                                height={350}
                                 chartConfig={chartConfig}
                                 bezier
                                 style={{
                                     marginVertical: 8,
                                     borderRadius: 16,
                                     alignSelf: 'center',
+                                    marginLeft:15,
+                                    marginRight:15,
                                 }}
                             />
                             <Text
@@ -111,7 +105,7 @@ export default class reportsComponent extends Component {
                                 }}
                             >
                                 SYLLABUS COMPLETION
-                        </Text>
+                            </Text>
                             <View
                                 style={{
                                     overflow: 'scroll',
@@ -139,7 +133,7 @@ export default class reportsComponent extends Component {
     }
 
     componentDidMount() {
-        this._mounted = true;
+        Orientation.lockToLandscape();
         AsyncStorage.getItem('sailor_captain_user').then((user) => {
             let user_data = JSON.parse(user);
             let uid = user_data.teacher_foriegn_key;
@@ -174,7 +168,7 @@ export default class reportsComponent extends Component {
                 })
                 .catch((error) => {
                     Alert.alert(
-                        "Unable to get your syllabus.",
+                        "Unable to get your reports.",
                         "Please check your internet connection or try again after sometime."
                     );
                 });
@@ -182,6 +176,6 @@ export default class reportsComponent extends Component {
     }
 
     componentWillUnmount() {
-        this._mounted = false;
+        Orientation.lockToPortrait();
     }
 }

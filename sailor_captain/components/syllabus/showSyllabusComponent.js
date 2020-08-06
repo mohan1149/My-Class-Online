@@ -18,7 +18,6 @@ import axios from 'axios';
 import Modal from 'react-native-modal';
 import SkeletonPlaceholder from "react-native-skeleton-placeholder";
 import { Appbar } from 'react-native-paper';
-import Menu, { MenuItem, MenuDivider } from 'react-native-material-menu';
 export default class showSyllabusComponent extends Component {
     _menu = null;
     constructor(props) {
@@ -37,9 +36,6 @@ export default class showSyllabusComponent extends Component {
             resetSyllabusModal: false,
         }
     }
-    setMenuRef = ref => {
-        this._menu = ref;
-    };
     render() {
         return (
             <>
@@ -50,18 +46,9 @@ export default class showSyllabusComponent extends Component {
                 >
                     <Appbar.BackAction onPress={() => this.props.navigation.goBack()} />
                     <Appbar.Content title="Subject Syllabus" subtitle="Update or Add Chapters" />
-                    <Appbar.Action icon="dots-vertical" onPress={() => this._menu.show()} />
+                    <Appbar.Action icon="plus" />
+                    <Appbar.Action icon="delete" />
                 </Appbar.Header>
-                <Menu
-                    ref={this.setMenuRef}
-                    style={{
-                        marginLeft: Dimensions.get('screen').width - 140,
-                    }}
-                >
-                    <MenuItem onPress={this.hideMenu}>Add Chapters</MenuItem>
-                    <MenuDivider />
-                    <MenuItem onPress={()=>{this._menu.hide();this.setState({resetSyllabusModal:true})}}>Reset Syllabus</MenuItem>
-                </Menu>
                 <Modal                
                     isVisible={this.state.resetSyllabusModal}
                     style={{

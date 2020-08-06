@@ -43,11 +43,7 @@ export default class SidebarComponent extends Component {
         return (
             <>
                 <ScrollView>
-                    <View
-                        style={{
-                            //height:Dimensions.get('screen').height,
-                        }}
-                    >
+                    <View>
                         {this.state.user_data === '' &&
                             <SkeletonPlaceholder>
                                 <SkeletonPlaceholder.Item flexDirection="row" alignSelf="center" marginTop={50}>
@@ -79,64 +75,62 @@ export default class SidebarComponent extends Component {
                                     />
                                     <ListItem
                                         title={I18n.t('home')}
-                                        bottomDivider
                                         chevron
                                         leftIcon={{ name: 'home' }}
                                         onPress={()=>{this.props.navigation.toggleDrawer();this.props.navigation.jumpTo('Home')}}
                                     />
                                     <ListItem
                                         title={I18n.t('attendence')}
-                                        bottomDivider
                                         chevron
                                         leftIcon={{ name: 'laptop' }}
                                         onPress={()=>{this.props.navigation.navigate('setClass')}}
                                     />
                                     <ListItem
                                         title={I18n.t('timetable')}
-                                        bottomDivider
                                         chevron
                                         leftIcon={{ name: 'alarm' }}
                                         onPress={()=>{this.props.navigation.navigate('userTimetable')}}
                                     />
                                     <ListItem
                                         title={I18n.t('homework')}
-                                        bottomDivider
                                         chevron
                                         leftIcon={{ name: 'create' }}
                                         onPress={()=>{this.props.navigation.navigate('homework')}}
                                     />
                                     <ListItem
                                         title={I18n.t('posts')}
-                                        bottomDivider
                                         chevron
                                         leftIcon={{ name: 'comment' }}
                                         onPress={()=>{this.props.navigation.toggleDrawer();this.props.navigation.jumpTo('posts')}}
                                     />
                                     <ListItem
                                         title={I18n.t('settings')}
-                                        bottomDivider
                                         chevron
                                         leftIcon={{ name: 'settings' }}
                                         onPress={()=>{this.props.navigation.toggleDrawer();this.props.navigation.jumpTo('Settings')}}
                                     />
                                     <ListItem
                                         title={I18n.t('profile')}
-                                        bottomDivider
                                         chevron
                                         leftIcon={{ name: 'person' }}
                                         onPress={()=>{this.props.navigation.toggleDrawer();this.props.navigation.jumpTo('Profile')}}
                                     />
                                     <ListItem
                                         title={I18n.t('notifications')}
-                                        bottomDivider
                                         chevron
                                         leftIcon={{ name: 'notifications' }}
                                         onPress={()=>{this.props.navigation.navigate('notifications')}}
                                     />
                                     <ListItem
+                                        title={I18n.t('logout')}
+                                        chevron
+                                        leftIcon={{ name: 'lock' }}
+                                        onPress={()=>{}}
+                                    />
+                                    <ListItem
                                         title={I18n.t('version')}
                                         rightTitle='1.0'
-                                        bottomDivider                                                                               
+                                                                                                                       
                                     />
                                 </View>
                             </View>

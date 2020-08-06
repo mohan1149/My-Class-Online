@@ -1,5 +1,5 @@
 export const API_CONSTANTS = {
-    API_SEVER             : 'https://4955e5187dca.ngrok.io',
+    API_SEVER             : 'https://sailor-erp.herokuapp.com',
     USER_LOGIN            : '/api/app/user/login',
     FORGOT_PASSWORD       : '/api/app/user/forgot/password',
     WEB_EDITOR            : '/api/app/editor',
