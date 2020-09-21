@@ -42,7 +42,11 @@ export default class postAttendenceComponent extends Component {
                     <Appbar.Content title={I18n.t('stud_list')} subtitle={I18n.t('stud_list_text')+ cl_name} />
                     <Appbar.Action icon="check" onPress={(e) => this.postAttendence()} />
                 </Appbar.Header>
-                <ScrollView>
+                <ScrollView
+                    style={{
+                        backgroundColor:'#fff'
+                    }}
+                >
                     {this.state.class_data === '' &&
                         <SkeletonPlaceholder>
 

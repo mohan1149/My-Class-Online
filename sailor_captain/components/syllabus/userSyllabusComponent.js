@@ -36,7 +36,11 @@ export default class userSyllabusComponent extends Component {
                     <Appbar.Content title=" My Syllabus" subtitle="List of classs you are taking." />
                     {/* <Appbar.Action icon="dots-vertical" onPress={() => this._menu.show()} /> */}
                 </Appbar.Header>
-                <ScrollView>
+                <ScrollView
+                    style={{
+                        backgroundColor:'#fff'
+                    }}
+                >
                     <View>
                         {this.state.userSyllabus === null &&
                             <SkeletonPlaceholder>

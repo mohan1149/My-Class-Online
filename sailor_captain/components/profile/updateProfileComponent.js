@@ -63,8 +63,8 @@ export default class updateProfileComponent extends Component{
                                     onAccessoryPress={()=>this.launchImagePicker()}
                                     accessory={{
                                         name:'person',
-                                        size:34,
-                                        color:'indigo',
+                                        size:26,
+                                        color:'#636b6f',
                                         backgroundColor:'#fff',
                                         borderRadius:40,                                                                              
                                     }}

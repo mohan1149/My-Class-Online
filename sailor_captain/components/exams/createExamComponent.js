@@ -23,16 +23,17 @@ import firebase from '@react-native-firebase/app';
 import { API_CONSTANTS } from './../../constants';
 import axios from 'axios';
 import AsyncStorage from '@react-native-community/async-storage';
-export default class createExamComponent extends Component {
+export default class createExamComponent extends Component { 
     constructor(props) {
         super(props);
+        const date = new Date();
         this.state = {
             uid: '',
             exTitle: '',
             exDesc: '',
             exMaxmarks: 0,
             exQualifymarks: 0,
-            exDate: '',
+            exDate: date.getFullYear()+'-'+date.getMonth()+'-'+date.getDate(),
             exTime: '',
             fileUp: false,
             showLoading: false,

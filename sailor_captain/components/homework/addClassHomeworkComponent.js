@@ -48,7 +48,7 @@ export default class addClassHomeworkComponent extends Component {
                 >
                     <Appbar.BackAction onPress={() => this.props.navigation.goBack()} />
                     <Appbar.Content title="Create Homework" />
-                    {/* <Appbar.Action icon="dots-vertical" onPress={() => this._menu.show()} /> */}
+                    <Appbar.Action icon="check" onPress={() => tthis.postHomework()} />
                 </Appbar.Header>
                 <ScrollView
                     style={{
@@ -151,15 +151,6 @@ export default class addClassHomeworkComponent extends Component {
                                 }
                             </View>
                         </View>
-                        {!this.state.showLoading &&
-                            <Button
-                                onPress={() => this.postHomework()}
-                                containerStyle={{
-                                    margin: 5,
-                                }}
-                                title="Save"
-                            />
-                        }
                         {this.state.showLoading &&
                             <ActivityIndicator
                                 size="large"

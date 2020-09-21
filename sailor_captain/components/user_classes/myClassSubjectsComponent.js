@@ -27,7 +27,11 @@ export default class myClassSubjectsComponent extends Component {
                     <Appbar.BackAction onPress={() => this.props.navigation.goBack()} />
                     <Appbar.Content title="Your Class Subjects" subtitle="Subjects & Syllabus completion" />
                 </Appbar.Header>
-                <ScrollView>
+                <ScrollView
+                    style={{
+                        backgroundColor:'#fff'
+                    }}
+                >
                     <View
                         style={{
                             margin: 10

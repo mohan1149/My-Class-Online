@@ -29,7 +29,11 @@ export default class myClassStudentsComponent extends Component {
                     <Appbar.BackAction onPress={() => this.props.navigation.goBack()} />
                     <Appbar.Content title="Students List" subtitle="List of students under your class." />
                 </Appbar.Header>
-                <ScrollView>
+                <ScrollView
+                    style={{
+                        backgroundColor:'#fff'
+                    }}
+                >
                     <View
                         style={{
                             margin: 5,

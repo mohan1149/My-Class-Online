@@ -22,7 +22,8 @@ export default class myClassComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            className: null,
+            className  : null,
+            classGrade : "Class" 
         }
     }
     render() {
@@ -37,9 +38,13 @@ export default class myClassComponent extends Component {
                     }}
                 >
                     <Appbar.BackAction onPress={() => this.props.navigation.goBack()} />
-                    <Appbar.Content title="Your Class" subtitle="You are assigned as Class Teacher" />
+                    <Appbar.Content title={this.state.classGrade} subtitle={this.state.className}/>
                 </Appbar.Header>
-                <ScrollView>
+                <ScrollView
+                    style={{
+                        backgroundColor:'#fff'
+                    }}
+                >
                     <View>
                         {this.state.className === null &&
                             <SkeletonPlaceholder>
@@ -83,14 +88,6 @@ export default class myClassComponent extends Component {
                                         margin: 10,
                                     }}
                                 >{this.state.classGrade + '  :  ' + this.state.className}</Text> */}
-                                <ListItem
-                                    title={this.state.classGrade}
-                                    subtitle={this.state.className}
-                                    leftAvatar={{
-                                        source:require('./../images/128/person.png'),
-                                        rounded:false
-                                    }}
-                                />
                                 <View
                                     style={{
                                         padding: 5,

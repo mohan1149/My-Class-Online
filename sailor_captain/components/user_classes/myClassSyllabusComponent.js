@@ -27,7 +27,11 @@ export default class myClassSyllabusComponent extends Component {
                     <Appbar.BackAction onPress={() => this.props.navigation.goBack()} />
                     <Appbar.Content title="Your Class Syllabus" subtitle="Subjects & Syllabus completion" />
                 </Appbar.Header>
-                <ScrollView>
+                <ScrollView
+                    style={{
+                        backgroundColor:'#fff'
+                    }}
+                >
                     <List.Section
                         style={{
                             backgroundColor: '#fff'
@@ -41,7 +45,6 @@ export default class myClassSyllabusComponent extends Component {
                                             borderBottomColor: '#ccc',
                                             borderBottomWidth: 1,
                                             borderTopColor: '#ccc',
-                                            borderTopWidth: 1,
                                         }}
                                         key={index}
                                         title={subject.subject_name}

@@ -36,7 +36,11 @@ export default class addExamClassComponent extends Component {
                     <Appbar.Content title="Your Classes" subtitle="Choose class to add exam"/>
                     {/* <Appbar.Action icon="dots-vertical" onPress={() => this._menu.show()} /> */}
                 </Appbar.Header>
-                <ScrollView>
+                <ScrollView
+                    style={{
+                        backgroundColor:'#fff'
+                    }}
+                >
                     <View>
                         {this.state.userSyllabus === null &&
                             <SkeletonPlaceholder>

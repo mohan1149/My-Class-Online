@@ -40,7 +40,11 @@ export default class setClassComponent extends Component {
                     <Appbar.Content title={I18n.t('your_classes')} subtitle={I18n.t('your_classes_text')}/>
                     {/* <Appbar.Action icon="dots-vertical" onPress={() => this._menu.show()} /> */}
                 </Appbar.Header>
-                <ScrollView>
+                <ScrollView
+                    style={{
+                        backgroundColor:'#fff'
+                    }}
+                >
                     <View
                         style={{
                             marginLeft: 20,

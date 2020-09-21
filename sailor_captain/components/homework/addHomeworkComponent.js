@@ -36,7 +36,11 @@ export default class addFomeworkComponent extends Component {
                     <Appbar.Content title="Assign Homework" />
                     {/* <Appbar.Action icon="dots-vertical" onPress={() => this._menu.show()} /> */}
                 </Appbar.Header>
-                <ScrollView>
+                <ScrollView
+                    style={{
+                        backgroundColor:'#fff'
+                    }}
+                >
                 <View>
                     {this.state.userSyllabus === null &&
                         <SkeletonPlaceholder>
