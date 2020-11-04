@@ -49,14 +49,12 @@ export default class postAttendenceComponent extends Component {
                 >
                     {this.state.class_data === '' &&
                         <SkeletonPlaceholder>
-
                             <SkeletonPlaceholder.Item flexDirection="row" alignItems="center" marginTop={10}>
                                 <SkeletonPlaceholder.Item marginLeft={20} width={60} height={60} borderRadius={50} />
                                 <SkeletonPlaceholder.Item marginLeft={10}>
                                     <SkeletonPlaceholder.Item marginTop={5} width={200} height={20} borderRadius={4} />
                                     <SkeletonPlaceholder.Item marginTop={5} width={150} height={20} borderRadius={4} />
                                 </SkeletonPlaceholder.Item>
-                                <SkeletonPlaceholder.Item marginTop={15} marginLeft={15} width={20} height={20} borderRadius={10} />
                             </SkeletonPlaceholder.Item>
 
                             <SkeletonPlaceholder.Item flexDirection="row" alignItems="center" marginTop={10}>
@@ -65,7 +63,6 @@ export default class postAttendenceComponent extends Component {
                                     <SkeletonPlaceholder.Item marginTop={5} width={200} height={20} borderRadius={4} />
                                     <SkeletonPlaceholder.Item marginTop={5} width={150} height={20} borderRadius={4} />
                                 </SkeletonPlaceholder.Item>
-                                <SkeletonPlaceholder.Item marginTop={15} marginLeft={15} width={20} height={20} borderRadius={10} />
                             </SkeletonPlaceholder.Item>
 
                             <SkeletonPlaceholder.Item flexDirection="row" alignItems="center" marginTop={10}>
@@ -74,7 +71,6 @@ export default class postAttendenceComponent extends Component {
                                     <SkeletonPlaceholder.Item marginTop={5} width={200} height={20} borderRadius={4} />
                                     <SkeletonPlaceholder.Item marginTop={5} width={150} height={20} borderRadius={4} />
                                 </SkeletonPlaceholder.Item>
-                                <SkeletonPlaceholder.Item marginTop={15} marginLeft={15} width={20} height={20} borderRadius={10} />
                             </SkeletonPlaceholder.Item>
 
                         </SkeletonPlaceholder>

@@ -171,6 +171,7 @@ export default class showSyllabusComponent extends Component {
                                                     title={chapter.chapter_name}
                                                     subtitle={'Chapter Completion : ' + chapter.chapter_compltion + ' %'}
                                                     bottomDivider
+                                                    onPress={(e) => this.setSubjectData(index + 1)}
                                                     rightElement={
                                                         <TouchableOpacity
                                                             onPress={(e) => this.setSubjectData(index + 1)}

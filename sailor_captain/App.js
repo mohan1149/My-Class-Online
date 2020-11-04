@@ -285,12 +285,7 @@ export default class App extends Component {
           />
           <Stack.Screen name="addPost" component={addPostComponent}
             options={{
-              headerShown: true,
-              headerBackTitle: 'Back',
-              headerTitle: 'Add Post',
-              headerTitleStyle: {
-                color: '#636b6f',
-              }
+              headerShown: false,
             }}
           />
           <Stack.Screen name="myPosts" component={myPostsComponent}

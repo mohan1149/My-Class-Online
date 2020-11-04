@@ -77,20 +77,9 @@ export default class userSyllabusComponent extends Component {
                                             key={index}
                                             title={JSON.parse(class_data.subject).subject}
                                             bottomDivider
+                                            chevron
                                             subtitle={class_data.grade_year + ' : ' + class_data.class_name}
-                                            rightElement={
-                                                <TouchableOpacity
-                                                    onPress={(e) => this.showSyllabus(class_data.class_id, JSON.parse(class_data.subject).subject)}
-                                                >
-                                                    <Image
-                                                        source={require('./../images/128/forward.png')}
-                                                        style={{
-                                                            width: 24,
-                                                            height: 24,
-                                                        }}
-                                                    />
-                                                </TouchableOpacity>
-                                            }
+                                            onPress={(e) => this.showSyllabus(class_data.class_id, JSON.parse(class_data.subject).subject)}
                                         />
                                     );
                                 })}

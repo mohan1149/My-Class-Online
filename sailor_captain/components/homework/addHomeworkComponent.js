@@ -78,19 +78,8 @@ export default class addFomeworkComponent extends Component {
                                         title={JSON.parse(class_data.subject).subject}
                                         bottomDivider
                                         subtitle={class_data.grade_year + ' : ' + class_data.class_name}
-                                        rightElement={
-                                            <TouchableOpacity
-                                                onPress={(e) => this.addHomework(class_data.class_id, class_data.subject)}
-                                            >
-                                                <Image
-                                                    source={require('./../images/128/forward.png')}
-                                                    style={{
-                                                        width: 24,
-                                                        height: 24,
-                                                    }}
-                                                />
-                                            </TouchableOpacity>
-                                        }
+                                        onPress={(e) => this.addHomework(class_data.class_id, class_data.subject)}
+                                        chevron
                                     />
                                 );
                             })}

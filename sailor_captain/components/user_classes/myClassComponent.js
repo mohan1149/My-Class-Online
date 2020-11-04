@@ -100,16 +100,9 @@ export default class myClassComponent extends Component {
                                                 source={require('./../images/128/id-card.png')}
                                             />
                                         }
-                                        rightElement={
-                                            <TouchableOpacity
-                                                onPress={() => this.props.navigation.navigate('classStudents', this.state.classStudents)}
-                                            >
-                                                <Image style={Styles.forwardImage}
-                                                    source={require('./../images/128/forward.png')}
-                                                />
-                                            </TouchableOpacity>
-                                        }
+                                        onPress={() => this.props.navigation.navigate('classStudents', this.state.classStudents)}
                                         bottomDivider
+                                        chevron
                                     />
                                     <ListItem
                                         title="Subjects"
@@ -118,16 +111,9 @@ export default class myClassComponent extends Component {
                                                 source={require('./../images/reading.png')}
                                             />
                                         }
-                                        rightElement={
-                                            <TouchableOpacity
-                                                onPress={() => this.props.navigation.navigate('classSubjects', this.state.classSubjects)}
-                                            >
-                                                <Image style={Styles.forwardImage}
-                                                    source={require('./../images/128/forward.png')}
-                                                />
-                                            </TouchableOpacity>
-                                        }
+                                        onPress={() => this.props.navigation.navigate('classSubjects', this.state.classSubjects)}
                                         bottomDivider
+                                        chevron
                                     />
                                     <ListItem
                                         title="Syllabus"
@@ -136,35 +122,21 @@ export default class myClassComponent extends Component {
                                                 source={require('./../images/syllabus.png')}
                                             />
                                         }
-                                        rightElement={
-                                            <TouchableOpacity
-                                                onPress={() => this.props.navigation.navigate('classSyllabus', this.state.classSubjects)}
-                                            >
-                                                <Image style={Styles.forwardImage}
-                                                    source={require('./../images/128/forward.png')}
-                                                />
-                                            </TouchableOpacity>
-                                        }
+                                        onPress={() => this.props.navigation.navigate('classSyllabus', this.state.classSubjects)}
                                         bottomDivider
+                                        chevron
                                     />
-                                    {/* <ListItem
-                                    title="Timetable"
-                                    leftAvatar={
-                                        <Avatar                                            
-                                            source={require('./../images/128/clock.png')}
-                                        />
-                                    }
-                                    rightElement={
-                                        <TouchableOpacity
-                                            onPress={()=>this.props.navigation.navigate('classTimetable')}
-                                        >
-                                            <Image style={Styles.forwardImage}
-                                                source={require('./../images/128/forward.png')}
+                                    <ListItem
+                                        title="Timetable"
+                                        leftAvatar={
+                                            <Avatar                                            
+                                                source={require('./../images/128/clock.png')}
                                             />
-                                        </TouchableOpacity>
-                                    }
-                                    bottomDivider
-                                /> */}
+                                        }
+                                        onPress={()=>this.props.navigation.navigate('classTimetable')}
+                                        bottomDivider
+                                        chevron
+                                    />
                                 </View>
                             </View>
                         }

@@ -54,22 +54,9 @@ export default class weekTimetableComponent extends Component {
                                                 title={title}
                                                 subtitle={grade}
                                                 bottomDivider
-                                                rightElement={
-                                                    <TouchableOpacity
-                                                        onPress={(e) => this.showSyllabus(today.class_id, JSON.parse(today.subject).subject)}
-                                                        disabled={today === null ? true : false}
-                                                    >
-                                                        <Image
-                                                            source={
-                                                                today === null ? require('./../images/128/stop.png') : require('./../images/128/forward.png')
-                                                            }
-                                                            style={{
-                                                                width: 24,
-                                                                height: 24,
-                                                            }}
-                                                        />
-                                                    </TouchableOpacity>
-                                                }
+                                                disabled={today === null ? true : false}
+                                                onPress={(e) => this.showSyllabus(today.class_id, JSON.parse(today.subject).subject)}
+                                                chevron={today != null ? true : false}
                                             />
                                         );
                                     })

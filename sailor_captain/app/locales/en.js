@@ -13,7 +13,7 @@ export default {
     submit          : 'Submit',
     back            : 'Back',
     attendence      : 'Attendance',
-    my_class        : 'My calss',
+    my_class        : 'My class',
     timetable       : 'Timetable',
     syllabus        : 'syllabus',
     homework        : 'Homework',

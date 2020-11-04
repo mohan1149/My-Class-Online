@@ -107,22 +107,9 @@ export default class timetableComponent extends Component {
                                                 title={title}
                                                 subtitle={grade}
                                                 bottomDivider
-                                                rightElement={
-                                                    <TouchableOpacity
-                                                        disabled={today === null ? true : false}
-                                                        onPress={(e) => this.showSyllabus(today.class_id, JSON.parse(today.subject).subject)}
-                                                    >
-                                                        <Image
-                                                            source={
-                                                                today === null ? require('./../images/128/stop.png') : require('./../images/128/forward.png')
-                                                            }
-                                                            style={{
-                                                                width: 24,
-                                                                height: 24,
-                                                            }}
-                                                        />
-                                                    </TouchableOpacity>
-                                                }
+                                                disabled={today === null ? true : false}
+                                                onPress={(e) => this.showSyllabus(today.class_id, JSON.parse(today.subject).subject)}
+                                                chevron={today != null ? true : false}
                                             />
                                         );
                                     })
@@ -140,20 +127,9 @@ export default class timetableComponent extends Component {
                                                     textTransform: 'capitalize',
                                                 }}
                                                 key={index}
-                                                rightElement={
-                                                    <TouchableOpacity
-                                                        onPress={(e) => this.moveToWeek(week, this.state.timetable_data)}
-                                                    >
-                                                        <Image
-                                                            source={require('./../images/128/forward.png')}
-                                                            style={{
-                                                                width: 24,
-                                                                height: 24,
-                                                            }}
-                                                        />
-                                                    </TouchableOpacity>
-                                                }
+                                                onPress={(e) => this.moveToWeek(week, this.state.timetable_data)}
                                                 bottomDivider
+                                                chevron
                                             />
                                         );
                                     })

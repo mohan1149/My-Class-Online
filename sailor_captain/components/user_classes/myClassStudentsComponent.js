@@ -46,20 +46,9 @@ export default class myClassStudentsComponent extends Component {
                                         key={index}
                                         title={student.fname + ' ' + student.lname}
                                         subtitle={student.sid}
-                                        rightElement={
-                                            <TouchableOpacity
-                                                onPress={() => this.props.navigation.navigate('viewStudent', student)}
-                                            >
-                                                <Image
-                                                    source={require('./../images/128/forward.png')}
-                                                    style={{
-                                                        width: 24,
-                                                        height: 24,
-                                                    }}
-                                                />
-                                            </TouchableOpacity>
-                                        }
+                                        onPress={() => this.props.navigation.navigate('viewStudent', student)}
                                         bottomDivider
+                                        chevron
                                     />
                                 );
                             })

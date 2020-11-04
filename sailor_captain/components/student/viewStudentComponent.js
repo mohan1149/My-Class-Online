@@ -110,17 +110,7 @@ export default class viewStudentComponent extends Component {
                                     size="small"
                                 />
                             }
-                            rightElement={
-                                <TouchableOpacity>
-                                    <Image
-                                        source={require('./../images/128/forward.png')}
-                                        style={{
-                                            width: 24,
-                                            height: 24
-                                        }}
-                                    />
-                                </TouchableOpacity>
-                            }
+                            chevron
                             bottomDivider
                         />
                         <ListItem
@@ -132,17 +122,7 @@ export default class viewStudentComponent extends Component {
                                     size="small"
                                 />
                             }
-                            rightElement={
-                                <TouchableOpacity>
-                                    <Image
-                                        source={require('./../images/128/forward.png')}
-                                        style={{
-                                            width: 24,
-                                            height: 24
-                                        }}
-                                    />
-                                </TouchableOpacity>
-                            }
+                            chevron
                             bottomDivider
                         />
                     </View>

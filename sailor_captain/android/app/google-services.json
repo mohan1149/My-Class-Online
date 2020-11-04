@@ -1,0 +1,41 @@
+
+{
+    "project_info": {
+      "project_number": "221602320880",
+      "firebase_url": "https://sailor-captain-ba8f3.firebaseio.com",
+      "project_id": "sailor-captain-ba8f3",
+      "storage_bucket": "sailor-captain-ba8f3.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:221602320880:android:82ebca5d80a24bfd55cd35",
+          "android_client_info": {
+            "package_name": "com.sailor_captain"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "221602320880-mvgaf1h006ne5ov18do0kqtgkdnglaoh.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyBd6SirLzTzoV49551AoU542SU3cCYREh4"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "221602320880-mvgaf1h006ne5ov18do0kqtgkdnglaoh.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }

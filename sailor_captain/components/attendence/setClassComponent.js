@@ -47,23 +47,21 @@ export default class setClassComponent extends Component {
                 >
                     <View
                         style={{
-                            marginLeft: 20,
+                            marginLeft: 10,
                         }}
                     >
                         {this.state.classData.length === 0 &&
                             <SkeletonPlaceholder>
                                 <SkeletonPlaceholder.Item flexDirection="row" alignItems="center" marginTop={10}>
                                     <SkeletonPlaceholder.Item marginLeft={10}>
-                                        <SkeletonPlaceholder.Item marginTop={5} width={Dimensions.get('screen').width - 90} height={60} borderRadius={4} />
+                                        <SkeletonPlaceholder.Item marginTop={5} width={Dimensions.get('screen').width - 40} height={60} borderRadius={4} />
                                     </SkeletonPlaceholder.Item>
-                                    <SkeletonPlaceholder.Item marginTop={15} marginLeft={15} width={30} height={30} borderRadius={20} />
                                 </SkeletonPlaceholder.Item>
 
                                 <SkeletonPlaceholder.Item flexDirection="row" alignItems="center" marginTop={10}>
                                     <SkeletonPlaceholder.Item marginLeft={10}>
-                                        <SkeletonPlaceholder.Item marginTop={5} width={Dimensions.get('screen').width - 90} height={60} borderRadius={4} />
+                                        <SkeletonPlaceholder.Item marginTop={5} width={Dimensions.get('screen').width - 40} height={60} borderRadius={4} />
                                     </SkeletonPlaceholder.Item>
-                                    <SkeletonPlaceholder.Item marginTop={15} marginLeft={15} width={30} height={30} borderRadius={20} />
                                 </SkeletonPlaceholder.Item>
 
                             </SkeletonPlaceholder>
@@ -94,19 +92,8 @@ export default class setClassComponent extends Component {
                                                 title={class_data.className}
                                                 subtitle={class_data.grade}
                                                 bottomDivider
-                                                rightElement={
-                                                    <TouchableOpacity
-                                                        onPress={() => this.gotoAttendence(class_data)}
-                                                    >
-                                                        <Image
-                                                            source={require('./../images/128/forward.png')}
-                                                            style={{
-                                                                width: 24,
-                                                                height: 24,
-                                                            }}
-                                                        />
-                                                    </TouchableOpacity>
-                                                }
+                                                chevron
+                                                onPress={() => this.gotoAttendence(class_data)}
                                             />
                                         )
                                     }
